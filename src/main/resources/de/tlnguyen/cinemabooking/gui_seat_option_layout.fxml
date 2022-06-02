@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER"
+      fillWidth="false"
+      prefHeight="851.0"
+      prefWidth="1109.0"
+      spacing="20.0"
+      xmlns="http://javafx.com/javafx/16"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="de.tlnguyen.cinemabooking.GuiSeatOptionController">
+	<padding>
+		<Insets bottom="20.0"
+		        left="20.0"
+		        right="20.0"
+		        top="20.0"/>
+	</padding>
+	<GridPane prefHeight="98.0"
+	          prefWidth="465.0">
+		<columnConstraints>
+			<ColumnConstraints halignment="LEFT"
+			                   hgrow="SOMETIMES"
+			                   maxWidth="282.0"
+			                   minWidth="131.0"
+			                   prefWidth="202.0"/>
+			<ColumnConstraints halignment="CENTER"
+			                   hgrow="SOMETIMES"
+			                   maxWidth="283.5"
+			                   minWidth="47.5"
+			                   prefWidth="263.5"/>
+		</columnConstraints>
+		<rowConstraints>
+			<RowConstraints maxHeight="93.0"
+			                minHeight="20.0"
+			                prefHeight="69.0"
+			                valignment="CENTER"
+			                vgrow="SOMETIMES"/>
+			<RowConstraints maxHeight="102.0"
+			                minHeight="29.0"
+			                prefHeight="53.0"
+			                valignment="CENTER"
+			                vgrow="SOMETIMES"/>
+			<RowConstraints maxHeight="102.0"
+			                minHeight="29.0"
+			                prefHeight="53.0"
+			                valignment="CENTER"
+			                vgrow="SOMETIMES"/>
+		</rowConstraints>
+		<children>
+			<Label fx:id="lblMovieName"
+			       text="Film"
+			       GridPane.halignment="CENTER">
+				<font>
+					<Font name="System Bold"
+					      size="18.0"/>
+				</font>
+			</Label>
+			<Label fx:id="lblMovieShowtime"
+			       text="Vorstellungsbeginn"
+			       GridPane.columnIndex="1">
+				<font>
+					<Font size="18.0"/>
+				</font>
+			</Label>
+			<Label fx:id="lblPriceName"
+			       text="Preis pro Person:"
+			       GridPane.halignment="LEFT"
+			       GridPane.rowIndex="1">
+				<font>
+					<Font size="16.0"/>
+				</font>
+			</Label>
+			<Label fx:id="lblPrice"
+			       text="Preis"
+			       GridPane.columnIndex="1"
+			       GridPane.halignment="CENTER"
+			       GridPane.rowIndex="1">
+				<font>
+					<Font size="16.0"/>
+				</font>
+			</Label>
+			<Label fx:id="lblNameDiscountPrice"
+			       text="Ermäßigter Preis pro Person:"
+			       GridPane.halignment="LEFT"
+			       GridPane.rowIndex="2">
+				<font>
+					<Font size="16.0"/>
+				</font>
+			</Label>
+			<Label fx:id="lblDiscountPrice"
+			       text="Preis"
+			       GridPane.columnIndex="1"
+			       GridPane.halignment="CENTER"
+			       GridPane.rowIndex="2">
+				<font>
+					<Font size="16.0"/>
+				</font>
+			</Label>
+		</children>
+	</GridPane>
+	<VBox fx:id="vbSeats"
+	      alignment="CENTER"
+	      fillWidth="false">
+		<children>
+			<Label text="LEINWAND">
+				<font>
+					<Font name="System Bold"
+					      size="18.0"/>
+				</font>
+				<VBox.margin>
+					<Insets top="10.0"/>
+				</VBox.margin>
+			</Label>
+			<GridPane fx:id="gpSeats"
+			          alignment="CENTER"
+			          prefHeight="315.0"
+			          prefWidth="722.0">
+				<VBox.margin>
+					<Insets top="20.0"/>
+				</VBox.margin>
+			</GridPane>
+		</children>
+		<VBox.margin>
+			<Insets top="20.0"/>
+		</VBox.margin>
+	</VBox>
+	<VBox alignment="CENTER_RIGHT"
+	      fillWidth="false"
+	      prefHeight="179.0"
+	      prefWidth="701.0"
+	      spacing="30.0">
+		<children>
+			<GridPane prefHeight="114.0"
+			          prefWidth="465.0">
+				<columnConstraints>
+					<ColumnConstraints halignment="CENTER"
+					                   hgrow="SOMETIMES"
+					                   maxWidth="193.0"
+					                   minWidth="10.0"
+					                   prefWidth="169.0"/>
+					<ColumnConstraints fillWidth="false"
+					                   halignment="CENTER"
+					                   hgrow="SOMETIMES"
+					                   maxWidth="193.0"
+					                   minWidth="10.0"
+					                   prefWidth="169.0"/>
+					<ColumnConstraints halignment="CENTER"
+					                   hgrow="SOMETIMES"
+					                   maxWidth="200.0"
+					                   minWidth="10.0"
+					                   prefWidth="193.0"/>
+				</columnConstraints>
+				<rowConstraints>
+					<RowConstraints prefHeight="30.0"
+					                valignment="CENTER"
+					                vgrow="SOMETIMES"/>
+					<RowConstraints maxHeight="53.0"
+					                minHeight="26.0"
+					                prefHeight="30.0"
+					                vgrow="SOMETIMES"/>
+					<RowConstraints fillHeight="false"
+					                maxHeight="39.0"
+					                minHeight="8.0"
+					                prefHeight="30.0"
+					                vgrow="SOMETIMES"/>
+					<RowConstraints prefHeight="40.0"
+					                valignment="BOTTOM"
+					                vgrow="SOMETIMES"/>
+				</rowConstraints>
+				<children>
+					<Label fx:id="lblNameDiscount"
+					       text="Ermäßigung"
+					       GridPane.rowIndex="2">
+						<font>
+							<Font size="18.0"/>
+						</font>
+					</Label>
+					<Label fx:id="lblNameNumberOfTickets"
+					       text="Anzahl der Plätze"
+					       GridPane.columnIndex="1">
+						<font>
+							<Font size="18.0"/>
+						</font>
+					</Label>
+					<Label fx:id="lblNameTotalPrice"
+					       text="Gesamtsumme"
+					       GridPane.columnIndex="2"
+					       GridPane.halignment="CENTER">
+						<font>
+							<Font size="18.0"/>
+						</font>
+					</Label>
+					<Label fx:id="lblNumberOfTickets"
+					       text="0"
+					       GridPane.columnIndex="1"
+					       GridPane.rowIndex="1">
+						<font>
+							<Font size="18.0"/>
+						</font>
+					</Label>
+					<Label fx:id="lblSubtotal"
+					       alignment="CENTER"
+					       text="0,00 €"
+					       GridPane.columnIndex="2"
+					       GridPane.halignment="CENTER"
+					       GridPane.rowIndex="1">
+						<font>
+							<Font name="System Bold"
+							      size="18.0"/>
+						</font>
+					</Label>
+					<Button fx:id="btnAddDiscount"
+					        mnemonicParsing="false"
+					        onAction="#addDiscountTicket"
+					        prefHeight="20.0"
+					        prefWidth="20.0"
+					        text="+"
+					        GridPane.columnIndex="1"
+					        GridPane.rowIndex="2">
+						<font>
+							<Font name="System Bold"
+							      size="14.0"/>
+						</font>
+						<GridPane.margin>
+							<Insets left="105.0"/>
+						</GridPane.margin>
+					</Button>
+					<Button fx:id="btnReduceDiscount"
+					        mnemonicParsing="false"
+					        onAction="#reduceDiscountTicket"
+					        prefHeight="20.0"
+					        prefWidth="20.0"
+					        text="-"
+					        GridPane.columnIndex="1"
+					        GridPane.rowIndex="2">
+						<font>
+							<Font name="System Bold"
+							      size="14.0"/>
+						</font>
+						<GridPane.margin>
+							<Insets right="105.0"/>
+						</GridPane.margin>
+					</Button>
+					<Label fx:id="lblNumberOfDiscountTickets"
+					       alignment="CENTER"
+					       contentDisplay="CENTER"
+					       prefHeight="30.0"
+					       prefWidth="30.0"
+					       text="0"
+					       GridPane.columnIndex="1"
+					       GridPane.rowIndex="2">
+						<font>
+							<Font size="18.0"/>
+						</font>
+						<GridPane.margin>
+							<Insets/>
+						</GridPane.margin>
+					</Label>
+					<Label fx:id="lblTotalDiscount"
+					       text="0,00 €"
+					       GridPane.columnIndex="2"
+					       GridPane.halignment="CENTER"
+					       GridPane.rowIndex="2">
+						<font>
+							<Font size="18.0"/>
+						</font>
+					</Label>
+					<Label fx:id="lblTotalPrice"
+					       text="0,00 €"
+					       GridPane.columnIndex="2"
+					       GridPane.halignment="CENTER"
+					       GridPane.rowIndex="3"
+					       GridPane.valignment="BOTTOM">
+						<font>
+							<Font name="System Bold"
+							      size="24.0"/>
+						</font>
+					</Label>
+				</children>
+			</GridPane>
+			<Button fx:id="btnBook"
+			        mnemonicParsing="false"
+			        onAction="#book"
+			        prefHeight="32.0"
+			        prefWidth="93.0"
+			        text="Buchen">
+				<font>
+					<Font size="18.0"/>
+				</font>
+				<VBox.margin>
+					<Insets right="45.0"/>
+				</VBox.margin>
+			</Button>
+		</children>
+	</VBox>
+	<Button fx:id="btnLogout"
+	        mnemonicParsing="false"
+	        onAction="#logout"
+	        prefHeight="31.0"
+	        prefWidth="202.0"
+	        text="Logout">
+		<VBox.margin>
+			<Insets/>
+		</VBox.margin>
+	</Button>
+</VBox>
